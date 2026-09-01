@@ -67,16 +67,13 @@ public class Theatre {
 
         opera.addActor(actor4);
         printInformationAbout(opera);
-        // Сейчас в спектакле есть несколько человек с одинаковой фамилией.
-        // Если бы мы хотели поменять актера, зная только фамилию, можно было бы поменять не того.
-        // Поэтому вместо фамилии используем экземпляр Actor.
-        opera.changeActor(actor5, actor4);
+        opera.changeActor(actor5, actor4.getSurname());
 
         // Попытка заменить несуществующего актера.
-        ballet.changeActor(actor1, actor3);
+        ballet.changeActor(actor1, actor3.getSurname());
 
         // Попытка заменить актера на того, кто уже участвует в спектакле.
-        opera.changeActor(actor2, actor3);
+        opera.changeActor(actor2, actor3.getSurname());
 
         System.out.println("Полная информация о спектаклях.");
         printInformationAbout(show);
