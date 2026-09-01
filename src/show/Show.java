@@ -36,6 +36,11 @@ public class Show {
     }
 
     public void changeActor(Actor newActor, Actor oldActor) {
+        if (listOfActors.contains(newActor)) {
+            System.out.println("Актер " + newActor + " уже участвует в спектакле " + title + ".");
+            return;
+        }
+
         int index = listOfActors.indexOf(oldActor);
         if (index != -1) {
             listOfActors.set(index, newActor);

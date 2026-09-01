@@ -75,6 +75,9 @@ public class Theatre {
         // Попытка заменить несуществующего актера.
         ballet.changeActor(actor1, actor3);
 
+        // Попытка заменить актера на того, кто уже участвует в спектакле.
+        opera.changeActor(actor2, actor3);
+
         System.out.println("Полная информация о спектаклях.");
         printInformationAbout(show);
 
